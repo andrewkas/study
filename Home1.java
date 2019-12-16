@@ -1,6 +1,4 @@
-package homework;
-
-public class Home1 {
+public class Home1 {  //бинарные операции
     public static void main(String[] args) {
         int a=42,b=15,c=-42, d=-15;
 
