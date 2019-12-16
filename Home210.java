@@ -34,7 +34,8 @@ public class Home210 { //Ввод массива и вывод разными ц
             System.out.print(l+" ");}
 
         System.out.print("\nВывод каждого второго элемента массива : ");
-        for (i=1; i<size;i=i+2){
+        for (i=1; i<size;i++){
+            if (i%2==0)
             System.out.print(array[i]+" ");}
 
     }
