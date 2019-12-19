@@ -205,9 +205,9 @@ public class Home31 {
                     System.out.println(Arrays.toString(array));
                     break;
                 case '6':
-                    int []result=sortMerge(array);
+                    sortMerge(array);
                     System.out.print("Cортировка слиянием : ");
-                    System.out.println(Arrays.toString(result));
+                    System.out.println(Arrays.toString(sortMerge(array)));
                     break;
 
             }
