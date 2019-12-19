@@ -5,6 +5,7 @@ public class Test6 {
         switch (a){
             default:
                 System.out.println("Привет " + a);
+                break;
             case 1:
                 System.out.println("Привет 1");
                 break;
