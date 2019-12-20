@@ -18,6 +18,7 @@ public class Home3_2 {//работа с числами
         System.out.println("\nВведите второе исследуемое число : ");
         int x = in.nextInt();
         Noknod(i, x);
+        Difnum(i);
 
     }
 
@@ -97,6 +98,31 @@ public class Home3_2 {//работа с числами
         }
         System.out.println("НОК И НОД отсутствует!");
     }
+
+    public static void Difnum(int x){ //Не доделана (считает не верно)
+    int j = 0;
+    int m;
+    int l = x;
+    int sum = 0;
+    // int i = 0;
+        for (l = x; l > 0; ) {
+        // while (l != 0) {
+        int a = l % 10;
+        l /= 10;
+        // i++;
+        for (m = l; m > 0; m /= 10) {
+            int b = m % 10;
+            if (a == b) {
+                j++;
+
+
+            }
+        }
+
+    }
+    sum = sum + j;
+            System.out.println("Количество пар цифр в числе - " +x+" : "+sum );
+}
 
 }
 
