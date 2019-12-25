@@ -1,6 +1,6 @@
 package classwork;
 
-public class Smartp extends GSMTel{
+public class Smartp extends GSMTel{ //extends - возможен только один раз в данном классе
     public void openInternet(){
         System.out.println("Гуглю");
     }
@@ -24,7 +24,7 @@ public class Smartp extends GSMTel{
     public void call(String number, boolean stopCall) {// это называется перегрузкой
         System.out.println("Отключить интернет...");
         System.out.println("Набираю " + number );
-        super.pause();
+        //super.pause();
         if(stopCall){
             System.out.println("Неожиданно бросаем трубку");
         }

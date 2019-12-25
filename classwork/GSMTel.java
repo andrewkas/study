@@ -1,6 +1,6 @@
 package classwork;
 
-public class GSMTel extends Tel {
+public class GSMTel implements ITel {
     public void sendSms(){
         System.out.println("Отрпавлена");
     }
@@ -8,5 +8,16 @@ public class GSMTel extends Tel {
         System.out.println("Играю в змею");
     }
 
+    @Override
+    public void call() {
+
     }
+
+    @Override
+    public void stop() {
+
+    }
+
+
+}
 

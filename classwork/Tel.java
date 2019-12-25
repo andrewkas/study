@@ -17,6 +17,7 @@ public class Tel implements ITel {//implements
     protected void pause() {
         System.out.println("Пауза");
     }
+
 }
 
 
