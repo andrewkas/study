@@ -5,7 +5,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Scanner;
 
 public enum Country implements ICountry {
-    BELARUS(207.595, 9.508), UKRAINE(603.549, 42.030), POLSKA(312.969, 38.413),
+    BELARUS(207.595, 9.508), UKRAINE(603.549, 42.030), POLAND(312.969, 38.413),
     LIETUVA(65.3, 2.791), RUSSIA(17098.246, 146.793), LATVIA(64.589, 1.919),
     SLOVAKIA(48.035, 5.450), GERMANY(357.386, 83.019), DENMARK(43.094, 5.811),
     GEORGIA(69.7, 3.723);

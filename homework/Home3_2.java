@@ -18,7 +18,7 @@ public class Home3_2 {//работа с числами
         System.out.println("\nВведите второе исследуемое число : ");
         int x = in.nextInt();
         Noknod(i, x);
-        Difnum(i);
+        DifNumbers(i);
 
     }
 
@@ -99,30 +99,54 @@ public class Home3_2 {//работа с числами
         System.out.println("НОК И НОД отсутствует!");
     }
 
-    public static void Difnum(int x){ //Не доделана (считает не верно)
-    int j = 0;
-    int m;
-    int l = x;
-    int sum = 0;
-    // int i = 0;
-        for (l = x; l > 0; ) {
-        // while (l != 0) {
-        int a = l % 10;
-        l /= 10;
-        // i++;
-        for (m = l; m > 0; m /= 10) {
-            int b = m % 10;
-            if (a == b) {
-                j++;
+  // public static void Difnum(int x){ //Не доделана (считает не верно)
+  // int j = 0;
+  // int m;
+  // int l = x;
+  // int sum = 0;
+  // // int i = 0;
+  //     for (l = x; l > 0; ) {
+  //     // while (l != 0) {
+  //     int a = l % 10;
+  //     l /= 10;
+  //     // i++;
+  //     for (m = l; m > 0; m /= 10) {
+  //         int b = m % 10;
+  //         if (a == b) {
+  //             j++;
 
 
+  //         }
+  //     }
+
+  // }
+  // sum = sum + j;
+  //         System.out.println("Количество пар цифр в числе - " +x+" : "+sum );
+//}
+    public static void DifNumbers(int num) {
+        System.out.printf("Количество уникальных цифр числа %d: ", num);
+        int num2 = num;
+        int d = 0;
+        int d2 = 0;
+        int count = 0;
+        int q = 0;
+        for (int i = 1; num > 0; num /= 10) {
+            d = num % 10;
+            count = 0;
+            num2 = num;
+            for (int j = 1; num2 > 0; num2 /= 10) {
+                d2 = num2 % 10;
+                if (d == d2) {
+                    count++;
+                }
+            }
+            if (count < 2) {
+                q++;
             }
         }
-
+        System.out.print(q);
+        System.out.println("");
     }
-    sum = sum + j;
-            System.out.println("Количество пар цифр в числе - " +x+" : "+sum );
-}
 
 }
 
