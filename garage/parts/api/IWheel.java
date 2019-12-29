@@ -1,7 +1,8 @@
 package garage.parts.api;
 
+import garage.parts.Wheel.WheelSpec;
+
 public interface IWheel {
-    void wheelSpin();
-    void wheelInstalled();
-    void wheelRemoved();
+    int getDiametr();
+    WheelSpec getwheelSpec();
 }

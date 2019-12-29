@@ -27,7 +27,12 @@ public enum Country implements ICountry {
         System.out.println("Население : " + popul + " млн.чел.");
     }
 
-    public void compare(Country count, Country count1) {
+    //public static Countrya (String str){
+    //    return valueOf(str.toUpperCase());
+    //}
+
+   // @Override
+    private void compare(Country count, Country count1) {
 
        if (count.area > count1.area)
         System.out.println(count.name()+", больше!");
@@ -44,19 +49,26 @@ public enum Country implements ICountry {
 
         Country country = Country.valueOf(count);
 
-
         country.getPopul();
         country.getArea();
         System.out.print("Проверка с объектом BELARUS через valueOf : ");
         System.out.println(Country.BELARUS == Country.valueOf(count));
+        System.out.println(Country.BELARUS==Country.BELARUS);
+        //System.out.println(Country.BELARUS==Country.valueOf("Belarus");
         System.out.println("Введите название страны для сравнения : ");
         String count1=in.nextLine();
         Country country1=Country.valueOf(count1);
         country.compare(country,country1);
-       
+
+
+
+        }
+//  тут могут находится гетеры и методы типа compare
+
+
 
 
 
     }
-}
+
 

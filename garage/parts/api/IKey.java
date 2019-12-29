@@ -1,4 +1,4 @@
 package garage.parts.api;
 
-public interface ILock {
+public interface IKey {
 }

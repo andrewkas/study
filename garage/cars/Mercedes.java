@@ -1,50 +1,43 @@
 package garage.cars;
 
-import garage.cars.api.ICar;
+import garage.cars.api.ACars;
+import garage.parts.api.IKey;
+import garage.parts.api.IWheel;
+//import garage.parts.engine.MercedesEngine;
+import garage.parts.engine.AllEngine;
+import garage.parts.engine.api.IEngine;
 
-public class Mercedes implements ICar {
+public class Mercedes extends ACars {
+    private String brand;
+    private String model;
+    private IEngine engine;
+   private IWheel wheel;
 
-    public void drive() {
-
+    public Mercedes(String brand, String model, AllEngine engine, IWheel wheel){
+        this.brand=brand;
+        this.model = model;
+        this.engine = engine;
+        this.wheel=wheel;
+        engine.getId();
+    }
+    public void getInfo() {
+        System.out.println(" двигатель с характеристиками " + engine.getCapacity() + " "
+                + engine.getId() + " " + engine.getFuelType());
+        System.out.println("Колеса " + wheel.getDiametr() + " диаметра, сезон : " + wheel.getwheelSpec());
     }
 
     @Override
-    public void open() {
-
+    public String getModel() {
+        return model;
     }
 
     @Override
-    public void close() {
-
+    public String getBrand() {
+        return brand;
     }
 
     @Override
-    public void start() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void fuel() {
-
-    }
-
-    @Override
-    public void changeWheel() {
-
-    }
-
-    @Override
-    public void driverSeat() {
-
-    }
-
-    @Override
-    public void passengerSeat() {
-
+    public boolean open(IKey key) {
+        return false;
     }
 }
