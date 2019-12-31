@@ -18,23 +18,28 @@ public class GarageMain {
 
         switch (key) {
             case 1:
-                Mercedes mercedes1 = new Mercedes("Mercedes", "GL666", new AllEngine(3,
+                Mercedes mercedes = new Mercedes("Mercedes", "GL666", new AllEngine(3000,
                         FuelType.PETROL, "MB20"),
                         new Wheels(WheelSpec.SUMMER, 18));
                 //  Mercedes mercedes2 = new Mercedes("GL666", new NoNameEngine());
-                System.out.print("Ваш ключ подошел к : " + mercedes1.getBrand() + " " + mercedes1.getModel());
-                mercedes1.getInfo();
+                System.out.print("Ваш ключ подошел к : " + mercedes.getBrand() + " " + mercedes.getModel());
+                mercedes.getInfo();
+                mercedes.start();
+                mercedes.stop();
+                mercedes.fuel();
 
-                mercedes1.start();
-                mercedes1.stop();
-                mercedes1.fuel();
                 break;
             case 2:
-                Bmw bmw1 = new Bmw("BMW", "X1", new AllEngine(2, FuelType.DIESEL, "N50"),
+                Bmw bmw = new Bmw("BMW", "X1", new AllEngine(2000, FuelType.DIESEL, "N50"),
                         new Wheels(WheelSpec.WINTER, 17));
-                System.out.print("Ваш ключ подошел к : " + bmw1.getBrand() + " " + bmw1.getModel());
-                bmw1.getInfo();
-                bmw1.start();
+                System.out.print("Ваш ключ подошел к : " + bmw.getBrand() + " " + bmw.getModel());
+                bmw.getInfo();
+                bmw.start();
+                bmw.driverSeat();
+
+                break;
+
+
 
 
         }
