@@ -2,20 +2,20 @@ package homework;
 
 public class Calc {
     public double add(double c,double d){
-        double ad=c+d;
-        return ad;
+        double result=c+d;
+        return result;
     }
     public double sub(double c,double d){
-        double su=c-d;
-        return su;
+        double result=c-d;
+        return result;
         }
     public double mult(double c, double d){
-        double mul=c*d;
-        return mul;
+        double result=c*d;
+        return result;
     }
     public double separ(double c, double d){
-        double sep=c/d;
-        return sep;
+        double result=c/d;
+        return result;
     }
 
 }
