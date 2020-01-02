@@ -1,9 +1,9 @@
 package garage.cars;
 
 import garage.cars.api.ACars;
+import garage.parts.Lock.Lock;
 import garage.parts.api.IKey;
 import garage.parts.api.IWheel;
-//import garage.parts.engine.MercedesEngine;
 import garage.parts.engine.AllEngine;
 import garage.parts.engine.api.IEngine;
 
@@ -12,13 +12,14 @@ public class Mercedes extends ACars {
     private String model;
     private IEngine engine;
    private IWheel wheel;
+   private Lock lock;
 
-    public Mercedes(String brand, String model, AllEngine engine, IWheel wheel){
+    public Mercedes(String brand, String model, AllEngine engine, IWheel wheel, Lock lock){
         this.brand=brand;
         this.model = model;
         this.engine = engine;
         this.wheel=wheel;
-        engine.getId();
+        this.lock=lock;
     }
     public void getInfo() {
         System.out.println(" двигатель с характеристиками " + engine.getCapacity() + " "
@@ -38,6 +39,6 @@ public class Mercedes extends ACars {
 
     @Override
     public boolean open(IKey key) {
-        return false;
+        return true;
     }
 }

@@ -15,16 +15,11 @@ private final String numberOfKey;
         return key.keyOfLock().equals(numberOfKey);
 
 
-    }
 
+  }
     @Override
-    public boolean close() {
-        return false;
-    }
-
-    @Override
-    public boolean open() {
-        return false;
+    public boolean open(IKey key) {
+        return key.keyOfLock().equals(numberOfKey);
     }
 }
 

@@ -1,6 +1,14 @@
 package garage.cars.api;
 
+import garage.parts.engine.AllEngine;
+import garage.parts.engine.api.IEngine;
+
 public abstract class ACars implements ICar{
+
+
+
+    public void getInfo() {
+    }
 
     @Override
     public void drive() {
