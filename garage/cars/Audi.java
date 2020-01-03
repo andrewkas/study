@@ -1,16 +1,31 @@
 package garage.cars;
 
 import garage.cars.api.ACars;
+import garage.parts.api.IKey;
+import garage.parts.api.IWheel;
+import garage.parts.engine.AllEngine;
 import garage.parts.engine.api.IEngine;
 
-public abstract class Audi extends ACars {
+public class Audi extends ACars {
+    private String brand;
     private String model;
-    private IEngine engine;
+    private AllEngine engine;
+    private IWheel wheel;
 
-    public Audi(String model, IEngine engine){
+    public Audi(String brand, String model, AllEngine engine, IWheel wheel) {
+        this. brand = brand;
         this.model = model;
         this.engine = engine;
+        this.wheel = wheel;
+
+
     }
+    public void getInfo(){
+        System.out.println(" двигатель с характеристиками "+engine.getCapacity()+ " "
+                +engine.getId()+" "+engine.getFuelType());
+        System.out.println("Колеса " +wheel.getDiametr()+" диаметра, сезон : "+wheel.getwheelSpec());
+    }
+
 
     @Override
     public String getModel() {
@@ -19,6 +34,11 @@ public abstract class Audi extends ACars {
 
     @Override
     public String getBrand() {
-        return "Mercedes";
+        return brand;
+    }
+    @Override
+    public boolean open(IKey key) {
+        return false;
     }
 }
+
