@@ -12,7 +12,8 @@ import java.util.Locale;
 
 public class Driver {
    public static void main(String[] args) {
-        IKey key = new Key("mercedes");
+    //    IKey key = new Key("mercedes");
+     //   Mercedes mercedes.open(key);
 
 
 

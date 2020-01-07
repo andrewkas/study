@@ -39,6 +39,8 @@ public class Mercedes extends ACars {
 
     @Override
     public boolean open(IKey key) {
-        return true;
+        return lock.open(key);
     }
+
+
 }
