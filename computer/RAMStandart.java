@@ -1,7 +1,7 @@
 package computer;
 
 public enum RAMStandart implements IStandart{
-    DDR2,DDR3;
+    DDR1,DDR2,DDR3;
 
     }
 

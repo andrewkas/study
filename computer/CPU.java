@@ -1,5 +1,7 @@
 package computer;
 
+import java.util.Arrays;
+
 public class CPU implements IParts{
     private CPUStandart standart;
 
@@ -9,12 +11,12 @@ public class CPU implements IParts{
 
     @Override
     public IStandart[] getStandart() {
-        return new IStandart[0];
+        return new IParts[0];
     }
 
     @Override
     public boolean test() {
-        CPUStandart.valueOf(new CPU(CPUStandart.ZEN));
-        return false;
+        return Arrays.equals(CPUStandart.values(),getStandart());
+
     }
 }

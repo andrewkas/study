@@ -1,6 +1,8 @@
 package computer;
 
-public class HDD implements IParts{
+import java.util.Arrays;
+
+public class HDD implements IParts {
     private HDDStandart standart;
 
     HDD(HDDStandart standart) {
@@ -10,12 +12,13 @@ public class HDD implements IParts{
 
     @Override
     public IStandart[] getStandart() {
-        return new IStandart[0];
+         return new IParts[2];
     }
 
     @Override
     public boolean test() {
         return false;
+
     }
 }
 
