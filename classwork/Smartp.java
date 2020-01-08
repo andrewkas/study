@@ -8,6 +8,7 @@ public class Smartp extends GSMTel{ //extends - возможен только о
     public void playTanks(){
         System.out.println("Танчики йуху!!!");
     }
+
     @Override//@ - nameMethod (params..) даная анотация требует и контролирует что что-то надо переопределить.
     public void call(){
        this.call("911");

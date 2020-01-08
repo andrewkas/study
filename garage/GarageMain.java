@@ -2,10 +2,12 @@ package garage;
 
 import garage.cars.Bmw;
 import garage.cars.Mercedes;
+import garage.parts.Key.Key;
 import garage.parts.Lock.Lock;
 import garage.parts.Wheel.Wheels;
 import garage.parts.Wheel.WheelSpec;
 //import garage.parts.engine.MercedesEngine;
+import garage.parts.api.IKey;
 import garage.parts.engine.AllEngine;
 import garage.parts.engine.api.FuelType;
 
@@ -13,6 +15,7 @@ import java.util.Scanner;
 
 public class GarageMain {
     public static void main(String[] args) {
+        IKey key=new Key("mercedes");
        // System.out.println("Введите Ваш ключ : ");
         //Scanner in = new Scanner(System.in);
         //int key = in.nextInt();
@@ -27,6 +30,7 @@ public class GarageMain {
                 mercedes.start();
                 mercedes.stop();
                 mercedes.fuel();
+                mercedes.open(key);
 
           //      break;
            // case 2:

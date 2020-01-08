@@ -1,5 +1,6 @@
 package garage.parts.engine;
 
+import classwork.Version;
 import garage.parts.engine.api.FuelType;
 import garage.parts.engine.api.IEngine;
 
@@ -8,7 +9,7 @@ public class AllEngine implements IEngine {
     private final int capacity;
     private FuelType fuelType;
     private boolean running = false;
-
+    @Version
     public AllEngine(int capacity,
                           FuelType fuelType,
                           String id){

@@ -15,10 +15,7 @@ public abstract class ACars implements ICar{
         System.out.println("Поехал");
     }
 
-    @Override
-    public void open() {
-        System.out.println("Открыто");
-    }
+
 
     @Override
     public void close() {
