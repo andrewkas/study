@@ -1,22 +1,21 @@
 package computer;
 
-import java.util.Arrays;
-
 public class CPU implements IParts{
-    private CPUStandart standart;
+    private IStandart standart;
 
-    CPU(CPUStandart standart) {
+    CPU(IStandart standart) {
         this.standart = standart;
     }
 
     @Override
-    public IStandart[] getStandart() {
-        return new IParts[0];
+    public CPUStandart getStandart() {
+        return (CPUStandart) standart;
     }
 
     @Override
     public boolean test() {
-        return Arrays.equals(CPUStandart.values(),getStandart());
+        return false;
 
     }
+
 }

@@ -1,18 +1,16 @@
 package computer;
 
-import java.util.Arrays;
-
 public class RAM implements IParts {
-    private RAMStandart standart;
+    private IStandart standart;
 
-    RAM(RAMStandart standart) {
+    RAM(IStandart standart) {
         this.standart = standart;
 
     }
 
     @Override
-    public IStandart[] getStandart() {
-        return new IParts[1];
+    public RAMStandart getStandart() {
+        return (RAMStandart) standart;
     }
 
     @Override

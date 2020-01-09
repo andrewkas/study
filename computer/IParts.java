@@ -1,6 +1,6 @@
 package computer;
 
 public interface IParts extends IStandart {
-    IStandart[] getStandart();
+    IStandart getStandart();
     boolean test();
 }
