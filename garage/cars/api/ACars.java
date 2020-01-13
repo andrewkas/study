@@ -1,20 +1,18 @@
 package garage.cars.api;
 
-import garage.parts.engine.AllEngine;
-import garage.parts.engine.api.IEngine;
+import computer.IParts;
+import garage.parts.Lock.Lock;
+import garage.parts.api.IKey;
+import garage.parts.api.ILock;
+import garage.parts.api.IWheel;
 
 public abstract class ACars implements ICar{
 
-
-
-    public void getInfo() {
-    }
 
     @Override
     public void drive() {
         System.out.println("Поехал");
     }
-
 
 
     @Override
@@ -54,4 +52,6 @@ public abstract class ACars implements ICar{
         System.out.println("Садим поссажира");
 
     }
-}
+         // System.out.println("Открыто"); }
+    }
+

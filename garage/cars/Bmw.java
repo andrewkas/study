@@ -24,12 +24,12 @@ public class Bmw extends ACars {
 
 
     }
-    public void getInfo(){
-        System.out.println(" двигатель с характеристиками "+engine.getCapacity()+ " "
-                +engine.getId()+" "+engine.getFuelType());
-        System.out.println("Колеса " +wheel.getDiametr()+" диаметра, сезон : "+wheel.getwheelSpec());
+    public void getInfo() {
+        System.out.print("Ваш ключ подошел к : " + getBrand() + " " + getModel());
+        System.out.println(" двигатель с характеристиками " + engine.getCapacity() + " "
+                + engine.getId() + " " + engine.getFuelType());
+        System.out.println("Колеса " + wheel.getDiametr() + " диаметра, сезон : " + wheel.getwheelSpec());
     }
-
 
     @Override
     public String getModel() {
@@ -41,9 +41,9 @@ public class Bmw extends ACars {
         return brand;
     }
 
-    @Override
     public boolean open(IKey key) {
-        return false;
+
+        return lock.open(key);
     }
 }
 

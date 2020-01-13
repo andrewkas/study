@@ -10,9 +10,6 @@ public interface ICar {
 
     void drive();
     boolean open(IKey key);
-
-//    void open();
-
     void close();
     void start();
     void stop();
