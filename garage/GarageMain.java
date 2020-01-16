@@ -26,7 +26,7 @@ public class GarageMain {
                 Audi audi = new Audi("Audi", "Q3", new AllEngine(2000, FuelType.PETROL, "TFSI"),
                 new Wheels(WheelSpec.ALLWEATHER, 18),new Lock("audi"));
 
-            IKey key=new Key("audi");
+            IKey key=new Key("bmw");
                 if(mercedes.open(key)){
                mercedes.getInfo();
                mercedes.start();

@@ -31,7 +31,7 @@ public class ExceptionTest {
     public static int method3(int data) throws MyChekedException {
         if (data == 0) {
             //try {
-            throw new MyChekedException("Переданные данные не могут быть 0");
+            throw new MyChekedException(" Переданные данные не могут быть 0");
             // } catch (MyChekedException e) {
             //     e.printStackTrace();
             //  }}

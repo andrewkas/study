@@ -3,6 +3,7 @@ package garage.cars;
 import garage.cars.api.ACars;
 import garage.parts.Lock.Lock;
 import garage.parts.api.IKey;
+import garage.parts.api.ILock;
 import garage.parts.api.IWheel;
 import garage.parts.engine.AllEngine;
 //import garage.parts.engine.MercedesEngine;
@@ -13,14 +14,14 @@ public class Bmw extends ACars {
     private String model;
     private AllEngine engine;
     private IWheel wheel;
-    private Lock lock;
+    private ILock lock;
 
-    public Bmw(String brand, String model, AllEngine engine, IWheel wheel, Lock lock) {
+    public Bmw(String brand, String model, AllEngine engine, IWheel wheel, ILock lock) {
         this. brand = brand;
         this.model = model;
         this.engine = engine;
         this.wheel = wheel;
-        this.lock=lock;
+        this.lock= lock ;
 
 
     }
