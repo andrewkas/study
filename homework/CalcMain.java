@@ -58,10 +58,10 @@ public class CalcMain {
                 System.out.println(+a + " * " + b + " = " + calc.mult(a, b));
                 break;
             case "/":
-                try {
-                    System.out.println(+a + " / " + b + " = " + calc.separ(a,b));
-                } catch (ArithmeticException exc) {
-                    System.out.println("Попытка деления на ноль!");}
+                               try {
+                                   System.out.println(+a + " / " + b + " = " + calc.separ(a,b));
+                               } catch (ArithmeticException exc) {
+                                   System.out.println("Попытка деления на ноль!");}
 
             //    try {
             //        System.out.println(+a + " / " + b + " = " + calc.separ(a,b));}
@@ -69,13 +69,13 @@ public class CalcMain {
             //        System.out.println("Проверка try-finally");
             //    }
 
-            //    try {
-            //        System.out.println(+a + " / " + b + " = " + calc.separ(a,b));
-            //    } catch (ArithmeticException exc) {
-            //        System.out.println("Попытка деления на ноль!");}
-            //    finally {
-            //        System.out.println("Проверка try-catch-finally");
-            //    }
+  //             try {
+  //                 System.out.println(+a + " / " + b + " = " + calc.separ(a,b));
+  //             } catch (ArithmeticException exc) {
+  //                 System.out.println("Попытка деления на ноль!");}
+  //             finally {
+  //                 System.out.println("Проверка try-catch-finally");
+  //             }
 
 
                     break;
