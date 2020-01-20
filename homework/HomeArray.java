@@ -10,18 +10,18 @@ public class HomeArray {
         int cashe=0;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите размер массива:");
-        int size = scanner.nextInt();
+       System.out.println("Введите размер массива:");
+       int size = scanner.nextInt();
+
         int[] array1 = new int[size];
         Integer num=null;
-
-
+        //scanner.close();
         for (i = 0; i < array1.length;) {
 
             try {
                 System.out.println("Введите элемент массива №" + sum + " :");
 
-                num = Integer.parseInt(scanner.nextLine());//не могу понять почему при первом проходе выкидывает в catch
+                num = Integer.valueOf(scanner.nextLine());//не могу понять почему при первом проходе выкидывает в catch
                 array1[i] = num;
                 sum++;
                 cashe = 0;

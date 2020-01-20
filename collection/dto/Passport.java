@@ -2,6 +2,7 @@ package collection.dto;
 
 import java.util.Date;
 import java.util.Objects;
+import java.util.Random;
 
 public class Passport {
     private String id;
@@ -30,6 +31,14 @@ public class Passport {
 
     public void setFio(String fio) {
         this.fio = fio;
+    }
+
+    public void passportRnd(){
+        Random random=new Random();
+        setId("MP"+random.nextInt(100000)+"IO");
+        setEffectiveAt(new Date());
+        setFio(" Джузеппе Иванов ");
+
     }
 
     @Override

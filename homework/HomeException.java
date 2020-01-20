@@ -6,11 +6,12 @@ public class HomeException {
     public static void main(String[] args) throws CheckException {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Введите делимое число");
-        int i=scanner.nextInt();
+        int i=Integer.valueOf(scanner.nextLine()) ;
         System.out.println("Введите делитель");
-        int j=scanner.nextInt();
+        int j=Integer.valueOf(scanner.nextInt());
        checkEx(j);
        HomeException2.checkEx(j);
+
 
         System.out.println("Результат деления :" +i/j);
 
