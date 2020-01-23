@@ -9,14 +9,14 @@ public class HomeCollection1 {
 
         List<Passport> collection = new ArrayList<>();//Генерируем пасспорта и добавлям в ArrayList
         long lStarttime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             Passport passport = new Passport();
             passport.passportRnd();
             collection.add(passport);
         }
         long lStoptime = System.currentTimeMillis();
         long output = (lStoptime - lStarttime);
-        System.out.println("Время добавления в ArrayList : " + output + " милисекунд");
+        System.out.println("Время добавления в ArrayList : " + output + " миллисекунд");
 
 
         long lStarttime3 = System.currentTimeMillis(); //Проходим итератором и удаляем из ArrayList
@@ -28,7 +28,7 @@ public class HomeCollection1 {
         }
         long lStoptime3 = System.currentTimeMillis();
         long output3 = (lStoptime3 - lStarttime3);
-        System.out.println("Время удаления итератором в ArrayList : " + output3 + " милисекунд");
+        System.out.println("Время удаления итератором в ArrayList : " + output3 + " миллисекунд");
 
 
         List<Passport> collection2 = new LinkedList<>();//Генерируем пасспорта и добавляем в LinkedList
@@ -40,7 +40,7 @@ public class HomeCollection1 {
         }
         long lStoptime2 = System.currentTimeMillis();
         long output2 = (lStoptime2 - lStarttime2);
-        System.out.println("Время добавления в LinkedList : " + output2 + " милисекунд");
+        System.out.println("Время добавления в LinkedList : " + output2 + " миллисекунд");
 
 
         long lStarttime4 = System.currentTimeMillis();
@@ -52,5 +52,5 @@ public class HomeCollection1 {
         }
         long lStoptime4 = System.currentTimeMillis();
         long output4 = (lStoptime4 - lStarttime4);
-        System.out.println("Время удаления итератором в LinkedList : " + output4 + " милисекунд");
+        System.out.println("Время удаления итератором в LinkedList : " + output4 + " миллисекунд");
     }}

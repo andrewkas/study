@@ -10,10 +10,10 @@ public class HomeArray {
         int cashe=0;
 
         Scanner scanner = new Scanner(System.in);
-       System.out.println("Введите размер массива:");
-       int size = scanner.nextInt();
+      // System.out.println("Введите размер массива:");
+      // int size = scanner.nextInt();
 
-        int[] array1 = new int[size];
+        int[] array1 = new int[5];
         Integer num=null;
         //scanner.close();
         for (i = 0; i < array1.length;) {

@@ -2,6 +2,7 @@ package homework;
 
 import collection.dto.Passport;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class FilterMain {
         list.add(passport3);
         list.add(passport4);
         list.add(passport5);
-
+        System.out.println(FilterApplicator.filter(list,new Filter()));
 
 
     }
