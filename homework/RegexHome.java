@@ -3,7 +3,7 @@ package homework;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegexHome1 {
+public class RegexHome {
     public static void main(String[] args) {
         String text = "Я люблю Java";
         Pattern pt,pt1,pt2,pt3;
