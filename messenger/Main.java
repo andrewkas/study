@@ -9,8 +9,8 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         Registration registration=new Registration();
-        User user1=registration.registration("abra@kadabra.by","12345");
-        User user2=registration.registration("kadabra@abra.by", "qwerty");
+        User user1=registration.registration("abra@kadabra.by","12WWer%32y");
+        User user2=registration.registration("kadabra@abra.by", "q2weT?tyq");
        // User user3=registration.registration("abra@kadabru.by","12345");
         System.out.println(user1);
         System.out.println(user2);
