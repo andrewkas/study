@@ -6,13 +6,13 @@ import messenger.api.MessageType;
 import java.util.Date;
 import java.util.Set;
 
-public class Message <T>implements IMessage<String> {
-private User user;
+public class Message <T>implements IMessage<T> {
+private final User user;
 private Date date;
-private String data;
+private T data;
 private MessageType type;
 
-public Message(User user,MessageType messageType, Date date, String data) {
+public Message(User user,MessageType messageType, Date date, T data) {
     this.user=user;
     this.type=messageType;
     this.date=date;
@@ -35,8 +35,10 @@ public Message(User user,MessageType messageType, Date date, String data) {
         return date;
     }
 
-
-
+    @Override
+    public T getData() {
+        return data;
+    }
 
 
     @Override

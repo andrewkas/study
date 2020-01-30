@@ -3,7 +3,9 @@ package messenger;
 
 import messenger.api.IUser;
 
-public class User implements IUser {
+import java.io.Serializable;
+
+public class User implements IUser , Serializable {
     private int id;
     private String name;
     private String password;
