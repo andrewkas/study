@@ -24,20 +24,17 @@ public class Chat<IMessages> extends SaveMessage{
 
     }
 
-    public List<IMessage> getMessages() {
-        return messages;
+    public void getMessages() {
+       for(IMessage mess:messages)
+           System.out.println(mess);
     }
  //  public void saveMessage(Chat chat){
- //
- //      chat.getMessages();
-
-// //   for(IMessage mess : messages)
- //      System.out.println(mess);}
+    //  chat.getMessages();
+//   for(IMessage mess : messages)
+//   System.out.println(mess);}
 
     public void saveMessage(Chat chat){
-
             chat.saveMess(chat);}
-
 
 
     @Override
