@@ -3,6 +3,8 @@ package messenger;
 
 import messenger.api.IUser;
 
+import java.io.IOException;
+import java.io.InvalidObjectException;
 import java.io.Serializable;
 
 public class User implements IUser , Serializable {
@@ -32,6 +34,22 @@ public class User implements IUser , Serializable {
     }
 
     @Override
+    public void setId(int i) {
+        this.id=i;
+
+    }
+
+    @Override
+    public void setName(String n) {
+        this.name=n;
+    }
+
+    @Override
+    public void setPassword(String p) {
+        this.password=p;
+    }
+
+    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
@@ -39,7 +57,23 @@ public class User implements IUser , Serializable {
                 ", password='" + password + '\'' +
                 '}';
     }
-}
+    private void writeObject(java.io.ObjectOutputStream out) throws IOException {
+        out.defaultWriteObject();
+        out.writeInt(getId());
+        out.writeObject(getName());
+        out.writeObject(getPassword());
+    }
+
+    private void readObject(java.io.ObjectInputStream in)  throws IOException, ClassNotFoundException{
+        in.defaultReadObject();
+        setId(in.readInt());
+        setName((String)in.readObject());
+        setPassword((String)in.readObject());
+    }
+
+    private void readObjectNoData() throws InvalidObjectException {
+        throw new InvalidObjectException("потока нет");
+}}
 
 
 

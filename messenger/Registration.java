@@ -9,7 +9,7 @@ import java.util.Random;
 public class Registration {
 
     public User registration(String name, String pass) {
-        if (Chat.users.contains(name)) {
+        if(Load.users.contains(name)) {
             throw new IllegalArgumentException("Такой пользователь уже есть");
         }
         if (!(Validation.validPass(pass))) { throw new IllegalArgumentException("Пароль не подходит! Минимум 7 символов из которых минимум " +
@@ -17,7 +17,7 @@ public class Registration {
         }
             Random rnd = new Random();
             int id = rnd.nextInt(10000);
-            Chat.users.add (new User(id, name, pass));
+            Load.users.add (new User(id, name, pass));
             return new User(id, name, pass);
 
         }

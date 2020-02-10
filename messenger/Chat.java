@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Chat<IMessages> extends SaveMessage{
     private List<IMessage> messages;
-    public static Set< IUser> users = new HashSet<IUser>();
+
 
     public Chat(List<IMessage> messages) {
         this.messages = messages;
