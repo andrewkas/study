@@ -1,7 +1,6 @@
 package messenger;
 
 import messenger.api.IMessage;
-import messenger.api.IUser;
 import messenger.api.MessageType;
 
 import java.io.FileOutputStream;
@@ -11,19 +10,18 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static messenger.Load.users;
-
+import static messenger.Chat.users;
 
 public class Main {
     public static void main(String[] args) {
         Load load=new Load();
         load.loadUser();
 
-        Registration registration=new Registration();
 
+        Registration registration=new Registration();
         User user1=registration.registration("abra@kadabra.by","12WWer%32y");
         User user2=registration.registration("kadabra@abra.by", "q2weY?tyq");
-//        User user3=registration.registration();
+        // User user3=registration.registration("abra@kadabru.by","12345");
       //  System.out.println(user1);
        // System.out.println(user2);
 

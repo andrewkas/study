@@ -9,7 +9,7 @@ public class Wheels implements IWheel {
     private WheelSpec wheelSpec;
     private int diameter;
   public Wheels(WheelSpec wheelSpec, int diameter){
-      this.wheelSpec=wheelSpec;
+
       this.diameter=diameter;
 
   }

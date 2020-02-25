@@ -11,6 +11,7 @@ public class User implements IUser , Serializable {
     private int id;
     private String name;
     private String password;
+    private Object User;
 
     public User(int id, String name, String password)
     {
@@ -31,6 +32,10 @@ public class User implements IUser , Serializable {
 
     public String getPassword() {
         return password;
+    }
+
+    public Object getUser(){
+        return User;
     }
 
     @Override

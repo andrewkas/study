@@ -14,7 +14,7 @@ public class Load {
         try {
             ObjectInputStream ois=new ObjectInputStream(new FileInputStream("user.txt"));
             users =((HashSet<IUser>)ois.readObject());
-            } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

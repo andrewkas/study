@@ -17,14 +17,14 @@ public class IoMain2 {
         users.add(u);
        // users.add(u1);
         try (OutputStream stream=new FileOutputStream("file_text.txt", true);
-
-            ObjectOutputStream objectOutputStream=new ObjectOutputStream(stream)){
-           // objectOutputStream.writeObject(u);
+             ObjectOutputStream objectOutputStream=new ObjectOutputStream(stream)){
+            // objectOutputStream.writeObject(u);
             objectOutputStream.writeObject(users);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
 //изучить методы writeObject,
