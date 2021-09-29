@@ -11,7 +11,7 @@ public class Producer {
         Callable<Integer>callable=new Task();
         int result=0;
 
-    ExecutorService service= Executors.newFixedThreadPool(10);
+    ExecutorService service= Executors.newFixedThreadPool(6);
 
     for(int i=0; i<10;i++){
         //Future<Integer> future=service.submit(callable);
