@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class ProducerConsumer {
-    private Queue<Integer>queue= new LinkedList<>();
+    private Queue<Integer> queue= new LinkedList<>();
     private int LIMIT =10;
     Object lock = new Object();
     public void producer() throws InterruptedException {

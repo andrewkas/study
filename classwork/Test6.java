@@ -1,3 +1,5 @@
+package classwork;
+
 public class Test6 {
     public static void main(String[] args) {
         int a = 11;
