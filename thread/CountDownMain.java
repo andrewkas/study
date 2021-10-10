@@ -12,7 +12,7 @@ public class CountDownMain {
         CountDownLatch countDownLatch=new CountDownLatch(VAL);
         List<Integer>out= Collections.synchronizedList(new ArrayList<>());
         ExecutorService executorService= Executors.newFixedThreadPool(3);
-        for(int i = 0; i<8; i++){
+        for(int i = 0; i<4; i++){
         executorService.execute(new Worker(countDownLatch,out,i));}
         countDownLatch.await();
         executorService.shutdown();
