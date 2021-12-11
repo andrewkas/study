@@ -1,4 +1,4 @@
-package garage.parts.engine.api;
+package garage.parts.engine;
 
 public enum FuelType {
     DIESEL,

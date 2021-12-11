@@ -1,24 +1,17 @@
 package garage.parts.engine;
 
-import classwork.Version;
-import garage.parts.engine.api.FuelType;
-import garage.parts.engine.api.IEngine;
+import garage.parts.api.IEngine;
 
-public class AllEngine implements IEngine {
-    private final String id;
-    private final int capacity;
-    private FuelType fuelType;
+import java.util.Random;
+
+public abstract class AllEngine implements IEngine {
+    protected String id;
+    protected double capacity;
+    protected int enginePower;
+
+
+   FuelType fuelType;
     private boolean running = false;
-    @Version
-    public AllEngine(int capacity,
-                          FuelType fuelType,
-                          String id){
-
-        this.capacity = capacity;
-        this.fuelType = fuelType;
-        this.id = id;
-
-    }
 
     @Override
     public String getId() {
@@ -26,8 +19,13 @@ public class AllEngine implements IEngine {
     }
 
     @Override
-    public int getCapacity() {
+    public double getCapacity() {
         return capacity;
+    }
+
+    @Override
+    public int getEnginePower() {
+        return enginePower;
     }
 
     @Override
@@ -35,16 +33,12 @@ public class AllEngine implements IEngine {
         return fuelType;
     }
 
-    //@Override
-    public void setFuelType(FuelType fuelType) {
-        this.fuelType = fuelType;
-    }
 
     public boolean start(){
         if(!running){
             running = true;
         } else {
-            throw new IllegalArgumentException("Немогу завесту уже заведенный мотор");
+            throw new IllegalArgumentException("КХХХХХ двигатель уже заведен!!!");
         }
         return running;
     }
@@ -52,15 +46,25 @@ public class AllEngine implements IEngine {
         if(running){
             running = false;
         } else {
-            throw new IllegalArgumentException("Немогу остановить уже остановленный мотор");
+            throw new IllegalArgumentException("Двигатель уже остановлен!!!");
         }
         return running;
     }
     public double running(){
         if(running){
-            //TODO добавить рандом
-            return 2;
+            int runTime=new Random().nextInt(600);
+            return runTime;
         }
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "id='" + id + '\'' +
+                ", capacity=" + capacity +
+                ", enginePower=" + enginePower +
+                ", fuelType=" + fuelType
+                ;
     }
 }

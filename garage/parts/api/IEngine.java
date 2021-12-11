@@ -1,9 +1,12 @@
-package garage.parts.engine.api;
+package garage.parts.api;
+
+import garage.parts.engine.FuelType;
 
 public interface IEngine {
     String getId();
     FuelType getFuelType();
-    int getCapacity();
+    double getCapacity();
+    int getEnginePower();
 
     boolean start();
     boolean stop();

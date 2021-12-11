@@ -30,12 +30,14 @@ public class SemaphoreMain {
 }
 class Connection {
 
-    private static Connection connection=new Connection();
+    private static Connection connection;
     private int conectionCount;
     private Semaphore semaphore=new Semaphore(10);
     private Connection(){}
 
     public static Connection getConnection(){
+        if(connection==null){
+            connection=new Connection();}
         return connection;
     }
     public void work() throws InterruptedException {
